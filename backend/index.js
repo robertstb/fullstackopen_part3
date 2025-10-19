@@ -31,9 +31,7 @@ let people = [
     }
 ]
 
-app.get('/', morgan('tiny'), (request, response) => {
-  response.send('<h1>Phonebook</h1>')
-})
+
 
 app.get('/info', morgan('tiny'), (request, response) => {
  response.send(`<p>Phonebook has info for ${people.length}</p>`+`<p>${new Date().toString()}</p>`)
